@@ -1,0 +1,24 @@
+﻿<Window x:Class="Password_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Generator"
+        mc:Ignorable="d"
+        Title="Password Generator" Height="450" Width="800"
+        ResizeMode="NoResize" Icon="/icon.png">
+    <Grid>
+        <TextBlock x:Name="TB1" HorizontalAlignment="Left" Margin="106,222,0,0" TextWrapping="Wrap" Text=" "  VerticalAlignment="Top" Width="363" Height="35" Background="#FFF9F9F9" TextAlignment="Center" FontSize="18" FontFamily="Calibri"/>
+        <Label Content="PASSWORD GENERATOR" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="522,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontWeight="Bold" FontSize="14"><Run Text="Number of characters:"/></TextBlock>
+        <Button x:Name="B2" Content="Copy To Clipboad" HorizontalAlignment="Left" Margin="603,222,0,0" VerticalAlignment="Top" BorderBrush="#FF707070" RenderTransformOrigin="0.402,0.152" Click="B2_Click" Height="35" FontWeight="Bold"/>
+        <CheckBox x:Name="LowerCaseCB" Content="Lower case" HorizontalAlignment="Left" Margin="100,168,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="UpperCaseCB" Content="Upper case" HorizontalAlignment="Left" Margin="250,168,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="NumbersCB" Content="Numbers" HorizontalAlignment="Left" Margin="400,168,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="SymbolsCB" Content="Symbols" HorizontalAlignment="Left" Margin="550,168,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="S1" HorizontalAlignment="Left" Margin="100,270,0,0" VerticalAlignment="Top" Width="415" Minimum="0" Maximum="30" TickPlacement="BottomRight" TickFrequency="1.0" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock x:Name="TB2" HorizontalAlignment="Left" Margin="676,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="49" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="B1" Content="Generate" HorizontalAlignment="Left" Margin="512,222,0,0" VerticalAlignment="Top" Click="B1_Click" Height="35" Width="70" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
