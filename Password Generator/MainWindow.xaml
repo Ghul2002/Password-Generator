@@ -7,18 +7,39 @@
         mc:Ignorable="d"
         Title="Password Generator" Height="450" Width="800"
         ResizeMode="NoResize" Icon="/icon.png">
+    <Window.Style>
+        <Style TargetType="Window">
+            <Setter Property="WindowChrome.WindowChrome">
+                <Setter.Value>
+                    <WindowChrome CaptionHeight="30" CornerRadius="10"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Window">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
     <Grid>
-        <TextBlock x:Name="TB1" HorizontalAlignment="Left" Margin="106,222,0,0" TextWrapping="Wrap" Text=" "  VerticalAlignment="Top" Width="363" Height="35" Background="#FFF9F9F9" TextAlignment="Center" FontSize="18" FontFamily="Calibri"/>
+        <TextBlock x:Name="PasswordTB" HorizontalAlignment="Left" Margin="106,222,0,0" TextWrapping="Wrap" Text=" "  VerticalAlignment="Top" Width="363" Height="35" Background="#FFF9F9F9" TextAlignment="Center" FontSize="18" FontFamily="Calibri"/>
         <Label Content="PASSWORD GENERATOR" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Margin="522,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontWeight="Bold" FontSize="14"><Run Text="Number of characters:"/></TextBlock>
-        <Button x:Name="B2" Content="Copy To Clipboad" HorizontalAlignment="Left" Margin="603,222,0,0" VerticalAlignment="Top" BorderBrush="#FF707070" RenderTransformOrigin="0.402,0.152" Click="B2_Click" Height="35" FontWeight="Bold"/>
+        <Button x:Name="CopyBT" Content="Copy To Clipboad" HorizontalAlignment="Left" Margin="603,222,0,0" VerticalAlignment="Top" BorderBrush="#FF707070" Click="CopyBT_Click" Height="35" FontWeight="Bold"/>
         <CheckBox x:Name="LowerCaseCB" Content="Lower case" HorizontalAlignment="Left" Margin="100,168,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <CheckBox x:Name="UpperCaseCB" Content="Upper case" HorizontalAlignment="Left" Margin="250,168,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="NumbersCB" Content="Numbers" HorizontalAlignment="Left" Margin="400,168,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="SymbolsCB" Content="Symbols" HorizontalAlignment="Left" Margin="550,168,0,0" VerticalAlignment="Top"/>
-        <Slider x:Name="S1" HorizontalAlignment="Left" Margin="100,270,0,0" VerticalAlignment="Top" Width="415" Minimum="0" Maximum="30" TickPlacement="BottomRight" TickFrequency="1.0" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"/>
-        <TextBlock x:Name="TB2" HorizontalAlignment="Left" Margin="676,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="49" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="B1" Content="Generate" HorizontalAlignment="Left" Margin="512,222,0,0" VerticalAlignment="Top" Click="B1_Click" Height="35" Width="70" FontWeight="Bold"/>
+        <Slider x:Name="Slider" HorizontalAlignment="Left" Margin="100,270,0,0" VerticalAlignment="Top" Width="415" Minimum="0" Maximum="30" TickPlacement="BottomRight" TickFrequency="1.0" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock x:Name="CharNumberTB" HorizontalAlignment="Left" Margin="676,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="49" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="GenBT" Content="Generate" HorizontalAlignment="Left" Margin="512,222,0,0" VerticalAlignment="Top" Height="35" Width="70" FontWeight="Bold" Click="GenBT_Click"/>
 
     </Grid>
 </Window>
